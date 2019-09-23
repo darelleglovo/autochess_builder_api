@@ -6,6 +6,7 @@ const app = express();
 const mongoose = require("mongoose");
 
 const userRoutes = require("./routes/user");
+const mainRoutes = require("./routes/main");
 // nCxWTZIt7QZRtVMy
 
 const env = require("./env.json");
@@ -41,5 +42,6 @@ app.use((req, res, next) => {
 
 
 app.use("/api/user", userRoutes);
+app.use("/api/main", mainRoutes);
 
 module.exports = app;
